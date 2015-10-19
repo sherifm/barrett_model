@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<robot name="wam7">
   <material name="WAMGrey">
     <color rgba="0.7 0.7 0.7 1.0"/>
   </material>
@@ -24,7 +25,7 @@
     <child link="shoulder_yaw_link"/>
     <origin rpy="0 0 0" xyz="0 0 0.346"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-2.6" upper="2.6" />
+    <limit effort="60" lower="-2.6" upper="2.6" velocity="2.0"/>
   </joint>
   <link name="shoulder_yaw_link">
     <visual>
@@ -41,7 +42,7 @@
     <child link="shoulder_pitch_link"/>
     <origin rpy="-1.57079632679 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.985" upper="1.985" />
+    <limit effort="60" lower="-1.985" upper="1.985" velocity="2.0"/>
   </joint>
   <link name="shoulder_pitch_link">
     <visual>
@@ -58,7 +59,7 @@
     <child link="upper_arm_link"/>
     <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-2.8" upper="2.8" />
+    <limit effort="45" lower="-2.8" upper="2.8" velocity="2.0"/>
   </joint>
   <link name="upper_arm_link">
     <visual>
@@ -75,7 +76,7 @@
     <child link="forearm_link"/>
     <origin rpy="-1.57079632679 0 0" xyz="0.045 0 0.55"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-0.9" upper="3.14159265359" />
+    <limit effort="30" lower="-0.9" upper="3.14159265359" velocity="2.00"/>
   </joint>
   <link name="forearm_link">
     <visual>
@@ -101,7 +102,7 @@
     <child link="wrist_yaw_link"/>
     <origin rpy="1.57079632679 0 0" xyz="-0.045 -0.3 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-4.55" upper="1.25" />
+    <limit effort="10" lower="-4.55" upper="1.25" velocity="2.0"/>
   </joint>
   <link name="wrist_yaw_link">
     <visual>
@@ -119,7 +120,7 @@
     <child link="wrist_pitch_link"/>
     <origin rpy="-1.57079632679 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.5707" upper="1.5707" />
+    <limit effort="10" lower="-1.5707" upper="1.5707" velocity="2.00"/>
   </joint>
   <link name="wrist_pitch_link">
     <visual>
@@ -136,7 +137,7 @@
     <child link="wrist_palm_link"/>
     <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-3.0" upper="3.0" />
+    <limit effort="10" lower="-3.0" upper="3.0" velocity="2.00"/>
   </joint>
   <link name="wrist_palm_link">
     <visual>
@@ -157,4 +158,3 @@
   <link name="wrist_palm_stump_link">
   </link>
 </robot>
-

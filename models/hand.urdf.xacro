@@ -184,7 +184,7 @@
       </visual>
       <collision>
         <geometry>
-          <mesh filename="${models_path}/sw_meshes/bhand/bhand_finger_med_link_convex.stl"/>
+          <mesh filename="${models_path}/sw_meshes/bhand/bhand_finger_med_link_convex.dae"/>
         </geometry>
       </collision>
     </link>
@@ -207,7 +207,7 @@
     </gazebo>
     <link name="${prefix}/dist_link">
       <inertial>
-        <origin xyz="0.022825 0.0010491 0.0004203" rpy="0 0 ${-PI/4}"/>
+        <origin xyz="0.022825 0.0010491 0.0004203" rpy="0 0 0"/>
         <mass value="0.041377" />
         <inertia
           ixx="3.1582e-006" ixy="1.4308e-006"  ixz="1.0106e-007"
@@ -226,7 +226,7 @@
       <collision>
         <origin rpy="0 0 ${-PI/4}"/>
         <geometry>
-          <mesh filename="${models_path}/sw_meshes/bhand/bhand_finger_dist_link_convex.stl"/>
+          <mesh filename="${models_path}/sw_meshes/bhand/bhand_finger_dist_link_convex.dae"/>
         </geometry>
       </collision>
     </link>
